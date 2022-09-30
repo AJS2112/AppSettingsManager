@@ -1,8 +1,37 @@
-﻿@{
+﻿@inject Microsoft.Extensions.Configuration.IConfiguration config;
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h5 class="display-4">SendGridKey</h5>
+    <p>@ViewBag.SendGridKey</p>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4">TwilioAuthToken</h5>
+    <p>@ViewBag.TwilioAuthToken</p>
+    <p>@ViewBag.TwilioAccountSid</p>
+    <p>@ViewBag.TwilioPhoneNumber</p>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4">BottomLevelSetting</h5>
+    <p>@ViewBag.BottomLevelSetting</p>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4">BottomLevelSetting Injected to View</h5>
+    <p>@config.GetSection("FirstLevelSetting:SecondLevelSetting:BottomLevelSetting").Value</p>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4">Social Loging Settings</h5>
+    <p>@ViewBag.FacebookKey </p>
+    <p>@ViewBag.GoogleKey </p>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4">Connection String</h5>
+    <p>@ViewBag.ConnectionString</p>
 </div>

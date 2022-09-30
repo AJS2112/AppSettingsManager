@@ -14,7 +14,9 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7016;http://localhost:5016",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SendGridKey": "SendGridKey in Enviroment Variables 111111111",
+        "Twilio__PhoneNumber": "PhoneNumber From Enviroment Variables +55 477897897987"
       }
     },
     "IIS Express": {
